@@ -1,0 +1,56 @@
+.popup {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  &__content {
+    background: white;
+    width: 500px;
+    height: 250px;
+    border-radius: 16px;
+    padding: 24px;
+    &__title {
+      font-size: 24px;
+      font-weight: 800;
+    }
+    &__form {
+      padding: 24px 0 ;
+      .input {
+        display: flex;
+        column-gap: 16px;
+        margin: 10px;
+        &__title {
+          font-size: 18px;
+          width: 150px;
+        }
+        &__handler {
+          padding: 8px;
+          border-radius: 8px;
+          width: 350px;
+        }
+      }
+    }
+    &__footer {
+      display: flex;
+      justify-content: flex-end;
+      .add-btn {
+        background: lightcoral;
+        padding: 8px;
+        border-radius: 8px;
+        color: black;
+        width: 70px;
+        cursor: pointer;
+        &:disabled {
+          cursor: no-drop;
+          background: gray;
+        }
+      }
+    }
+  }
+}
